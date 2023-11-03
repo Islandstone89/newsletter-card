@@ -1,0 +1,127 @@
+
+/* Custom Properties */
+
+:root {
+    --clr--light: #E6E9FB;
+    --clr--dark-blue: #111827;
+    --clr--dark: #374151;
+    --clr--light-violet: #B3B8D8;
+    --clr--white: #fff;
+    --clr--whiteish: #fafaff;
+
+    --ff--merryweather: 'Merryweather', serif;
+    --ff--poppins: 'Poppins', sans-serif;
+
+    /* Font weights for Poppins */
+    --fw--400: 400;
+    --fw--500: 500;
+
+    /* Font weight for Merryweather */
+    --fw--700: 700;
+
+    --fs--large: 2.5rem;
+    --fs--medium: 1.5rem;
+    --fs--small: 0.8rem;
+}
+
+/* CSS Reset */
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body,
+p,
+h1,
+h2,
+h3,
+h4 {
+    margin: 0;
+    padding: 0;
+}
+
+img, picture {
+    display: block;
+    max-width: 100%;
+}
+
+input, button,
+textarea, select {
+  font: inherit;
+}
+
+
+body {
+    font-family: var(--ff--poppins);
+    font-weight: var(--fw--400);
+} 
+
+main {
+    background-color: var(--clr--light);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.card {
+    background-color: var(--clr--white);
+    border-radius: 10px;
+    padding: 3.6rem;
+    max-width: 55rem;
+}
+
+h1 {
+    font-family: var(--ff--merryweather);
+    font-weight: var(--fw--700);
+    font-size: var(--fs--large);
+}
+
+.main-paragraph {
+    font-size: var(--fs--medium);
+    margin: 2rem 0;
+}
+
+.success {
+    display: none;
+}
+
+.form {
+    padding: 1rem;
+}
+
+.subscribe {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+input[type="email"] {
+    background-color: var(--clr--whiteish);
+    color: var(--clr--light-violet);
+    border: solid 1px var(--clr--whiteish);
+    border-radius: 5px;
+    padding: 1rem;
+    flex-grow: 1;
+}
+
+.btn {
+    background-color: var(--clr--dark-blue);
+    color: var(--clr--white);
+    padding: 1rem 2rem;
+}
+
+.btn:is(:hover, :focus) {
+    cursor: pointer;
+    opacity: .8;
+    transition: .5s;
+}
+
+.checkboxText {
+    font-size: var(--fs--small);
+}
