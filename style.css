@@ -52,6 +52,17 @@ textarea, select {
   font: inherit;
 }
 
+/* General Styling */
+
+.visually-hidden {
+    clip-path: inset(50%);
+    position: absolute;
+    overflow: hidden;
+    white-space: nowrap;
+    width: 1px;
+    height: 1px;
+}
+
 
 body {
     font-family: var(--ff--poppins);
@@ -60,7 +71,7 @@ body {
 
 main {
     background-color: var(--clr--light);
-    min-height: 100vh;
+    min-height: 100svh;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -88,7 +99,11 @@ h1 {
 }
 
 .success {
-    display: none;
+    opacity: 0;
+}
+
+.success.show {
+    opacity: 1;
 }
 
 @media(min-width: 50rem) {
@@ -113,7 +128,7 @@ h1 {
 
 input[type="email"] {
     background-color: var(--clr--whiteish);
-    color: var(--clr--light-violet);
+    color: var(--clr--dark);
     border: solid 1px var(--clr--whiteish);
     border-radius: 5px;
     padding: 1rem;

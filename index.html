@@ -15,16 +15,17 @@
   <body>
     <main>
       <div class="card">
+
         <h1>Level up your frontend skills</h1>
         <p class="main-paragraph">Sign up for our free newsletter to receive weekly coding challenges that will help you improve your frontend development skills.</p>
 
-        <form action="" class="form">
+        <form class="form">
           <div class="subscribe">
-            <input type="email" name="email" id="email" placeholder="Enter your email address">
-            <input type="submit" value="Subscribe" class="btn">
+            <label for="email" class="visually-hidden">Please enter your email address</label>
+            <input type="email" name="email" id="email" class="email" placeholder="Enter your email address" required>
+            <button type="submit" class="btn">Subscribe</button>
           </div><!-- end subscribe -->
 
-          <p class="success"></p>
           <div class="checkbox">
             <input type="checkbox" name="checkbox" id="checkbox">
               <span class="checkboxText">By checking this box, you agree to receive our weekly newsletter containing coding challenges, tips, and other related content. You may unsubscribe from the newsletter at any time.</span>
@@ -32,6 +33,10 @@
         </form><!-- end form -->
 
       </div><!-- end card -->
+
+      <dialog class="test">
+        <h2>Test</h2>
+      </dialog>
     </main>
 
     <script src="/src/script.js"></script>
